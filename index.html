@@ -1,26 +1,52 @@
 <!doctype html>
 <html lang="es">
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#b7e1ef"><meta name="description" content="Acompaña a Marcia y Angel a celebrar la dulce espera de Santiago.">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Baby Shower de Santiago</title>
-<link rel="stylesheet" href="styles.css?v=3">
-<body>
-<main aria-label="Invitación al baby shower de Santiago">
-<section class="panel cover" id="portada" aria-label="La vida está por volverse un poquito más dulce">
-<img src="assets/portada.jpeg" width="720" height="1280" alt="La vida está por volverse un poquito más dulce… Un sobre con sello azul y Winnie the Pooh.">
-<button class="hotspot envelope" data-open aria-label="Abrir la carta de invitación"></button>
-<button class="hotspot open" data-open aria-label="Abrir invitación"></button>
-</section>
-<div id="carta" hidden>
-<section class="panel" id="mensaje"><img src="assets/mensaje.jpeg" width="720" height="1280" alt="Un poquito de miel y muchísimo amor. Entre tarritos de miel, pequeñas aventuras y mucho amor, esperamos la llegada de alguien que hará nuestro mundo más hermoso."></section>
-<section class="panel" id="invitacion"><img src="assets/invitacion.jpeg" width="720" height="1280" loading="lazy" alt="Te invitamos a nuestro Baby Shower. Marcia y Angel quieren compartir esta alegría contigo y celebrar juntos la dulce espera de Santiago."></section>
-<section class="panel" id="evento"><img src="assets/evento.jpeg" width="720" height="1280" loading="lazy" alt="Sábado 12 de diciembre de 2026, 17:00. El Roble #2171, Concepción.">
-<div class="countdown" role="timer" aria-label="Tiempo restante para el baby shower"><div><strong id="dias">—</strong><span>días</span></div><div><strong id="horas">—</strong><span>horas</span></div><div><strong id="minutos">—</strong><span>minutos</span></div><div><strong id="segundos">—</strong><span>segundos</span></div></div>
-<a class="hotspot map" href="https://www.google.com/maps/search/?api=1&amp;query=El%20Roble%202171%2C%20Concepci%C3%B3n%2C%20Chile" target="_blank" rel="noopener" aria-label="Ver ubicación en Google Maps"></a>
-</section>
-<section class="panel" id="confirmacion"><img src="assets/confirmacion.jpeg" width="720" height="1280" loading="lazy" alt="Tu compañía hará este día todavía más dulce. Confirma tu asistencia hasta el lunes 30 de noviembre."><button class="hotspot rsvp" id="confirmar" aria-label="Confirmar asistencia"></button></section>
-</div>
-</main>
-<dialog id="aviso"><h2>Confirmación de asistencia</h2><p id="aviso-texto"></p><form method="dialog"><button>Cerrar</button></form></dialog>
-<script src="config.js"></script><script src="app.js?v=3"></script><script src="motion.js?v=3"></script>
-</body></html>
+<meta name="description" content="Marcia y Ángel te invitan al baby shower de Santiago. Sábado 12 de diciembre de 2026, 17:00 hrs.">
+<meta property="og:title" content="Baby Shower de Santiago">
+<meta property="og:description" content="La vida está por volverse un poquito más dulce… Sábado 12 de diciembre, 17:00 hrs.">
+<meta property="og:image" content="assets/gen/compartir.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#acddf5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" href="assets/gen/p0_sello.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body class="cerrado">
+  <div id="cargando" aria-hidden="true"><div class="gota"></div></div>
+  <script>setTimeout(function(){var c=document.getElementById('cargando');if(c)c.className='fuera';},7000);</script>
+
+  <section id="intro" aria-label="Sobre de la invitación"></section>
+  <main id="inv" aria-label="Invitación"></main>
+  <div id="hojas" aria-hidden="true"></div>
+
+  <div id="modal" role="dialog" aria-modal="true" aria-labelledby="m-titulo" hidden>
+    <div class="m-caja">
+      <button class="m-cerrar" type="button" aria-label="Cerrar">×</button>
+      <h2 id="m-titulo">Confirmar asistencia</h2>
+      <p class="m-sub">Tu compañía hará este día todavía más dulce.</p>
+      <form id="f-confirmar" novalidate>
+        <label class="m-et" for="f-nombre">Nombre del invitado</label>
+        <input id="f-nombre" name="nombre" maxlength="80" autocomplete="name" placeholder="Escribe tu nombre">
+        <p class="m-et">¿Podrás acompañarnos?</p>
+        <label class="op"><input type="radio" name="asiste" value="si"> Sí, asistiré.</label>
+        <label class="op"><input type="radio" name="asiste" value="no"> No podré asistir.</label>
+        <p class="m-error" role="alert"></p>
+        <div class="m-botones"></div>
+        <p class="m-nota">Se abrirá WhatsApp con tu mensaje listo. Recuerda pulsar «Enviar» dentro de WhatsApp. Puedes enviarlo a uno o a ambos.</p>
+      </form>
+    </div>
+  </div>
+
+  <div id="aviso" role="status" hidden></div>
+
+  <script src="config.js?v=4"></script>
+  <script src="assets/gen/manifest.js?v=4"></script>
+  <script src="app.js?v=4"></script>
+</body>
+</html>
