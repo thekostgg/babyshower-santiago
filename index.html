@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#b7e1ef"><meta name="description" content="Acompaña a Marcia y Angel a celebrar la dulce espera de Santiago.">
+<title>Baby Shower de Santiago</title>
+<link rel="stylesheet" href="styles.css">
+<body>
+<main aria-label="Invitación al baby shower de Santiago">
+<section class="panel cover" id="portada" aria-label="La vida está por volverse un poquito más dulce">
+<img src="assets/portada.jpeg" width="720" height="1280" alt="La vida está por volverse un poquito más dulce… Un sobre con sello azul y Winnie the Pooh.">
+<button class="hotspot envelope" data-open aria-label="Abrir la carta de invitación"></button>
+<button class="hotspot open" data-open aria-label="Abrir invitación"></button>
+</section>
+<div id="carta" hidden>
+<section class="panel" id="mensaje"><img src="assets/mensaje.jpeg" width="720" height="1280" alt="Un poquito de miel y muchísimo amor. Entre tarritos de miel, pequeñas aventuras y mucho amor, esperamos la llegada de alguien que hará nuestro mundo más hermoso."></section>
+<section class="panel" id="invitacion"><img src="assets/invitacion.jpeg" width="720" height="1280" loading="lazy" alt="Te invitamos a nuestro Baby Shower. Marcia y Angel quieren compartir esta alegría contigo y celebrar juntos la dulce espera de Santiago."></section>
+<section class="panel" id="evento"><img src="assets/evento.jpeg" width="720" height="1280" loading="lazy" alt="Sábado 12 de diciembre de 2026, 17:00. El Roble #2171, Concepción.">
+<div class="countdown" role="timer" aria-label="Tiempo restante para el baby shower"><div><strong id="dias">—</strong><span>días</span></div><div><strong id="horas">—</strong><span>horas</span></div><div><strong id="minutos">—</strong><span>minutos</span></div><div><strong id="segundos">—</strong><span>segundos</span></div></div>
+<a class="hotspot map" href="https://www.google.com/maps/search/?api=1&amp;query=El%20Roble%202171%2C%20Concepci%C3%B3n%2C%20Chile" target="_blank" rel="noopener" aria-label="Ver ubicación en Google Maps"></a>
+</section>
+<section class="panel" id="confirmacion"><img src="assets/confirmacion.jpeg" width="720" height="1280" loading="lazy" alt="Tu compañía hará este día todavía más dulce. Confirma tu asistencia hasta el lunes 30 de noviembre."><button class="hotspot rsvp" id="confirmar" aria-label="Confirmar asistencia"></button></section>
+</div>
+</main>
+<dialog id="aviso"><h2>Confirmación de asistencia</h2><p id="aviso-texto"></p><form method="dialog"><button>Cerrar</button></form></dialog>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
