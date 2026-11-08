@@ -13,3 +13,9 @@
 .next-section:hover{transform:translateY(-2px);box-shadow:0 5px 14px #79604715}
 .next-section:focus-visible{outline:3px solid #587c95;outline-offset:4px}
 @media(prefers-reduced-motion:reduce){.reveal-panel>img,.reveal-panel>svg{opacity:1;transform:none;transition:none}.cover>img,.cover>svg,.hotspot,.next-section{transition:none}.cover.opening>img,.cover.opening>svg{transform:none;filter:none}}
+.panel>canvas{display:block;width:100%;height:auto;aspect-ratio:9/16}
+.cover>canvas{transform-origin:50% 52%;transition:transform 1.4s var(--ease-invitation),filter 1.4s ease}
+.cover.opening>canvas{transform:scale(1.035);filter:brightness(1.035)}
+.reveal-panel>canvas{opacity:0;transform:translateY(32px);transition:opacity 1.1s ease,transform 1.4s var(--ease-invitation)}
+.reveal-panel.in-view>canvas{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){.panel>canvas{transition:none;transform:none;opacity:1}}
